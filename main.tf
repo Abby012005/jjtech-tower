@@ -1,4 +1,4 @@
-resource "aws_vpc" "group3_vpc" {
+resource "aws_vpc" "assignment_vpc" {
   cidr_block = var.vpc-cidr
   tags       = var.vpc-tags
 
@@ -11,8 +11,8 @@ resource "aws_subnet" "private-sn" {
   tags              = var.sn-tags
 }
 
-resource "aws_security_group" "group3_sg" {
-  vpc_id = aws_vpc.group3_vpc.id
+resource "aws_security_group" "assignment_vpc_sg" {
+  vpc_id = aws_vpc.assignment_vpc.id
 
   dynamic "ingress" {
     for_each = var.sg-ports

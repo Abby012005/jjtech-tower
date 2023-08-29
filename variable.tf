@@ -8,7 +8,7 @@ variable "vpc-tags" {
   description = "vpc reference tag"
   type        = map(string)
   default = {
-    "Name" = "group3-vpc"
+    "Name" = "assng-vpc"
     "Env"  = "Dev"
   }
 
@@ -30,7 +30,7 @@ variable "sn-tags" {
   description = "subnet tags"
   type        = map(string)
   default = {
-    "Name" = "group3-sn"
+    "Name" = "assng-sn"
     "Env"  = "Dev"
   }
 }
@@ -53,7 +53,7 @@ variable "instance_tags" {
   description = "tags for instance"
   type        = map(string)
   default = {
-    "Name" = "group3-instance"
+    "Name" = "assng-instance"
     "Env"  = "Dev"
   }
 
